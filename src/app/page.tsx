@@ -7,16 +7,13 @@ async function getProducts() {
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
-  return res.json();
+  const data = await res.json();
+  return data.products;
 }
 
 export default async function Home() {
   const products = await getProducts();
   console.log(products);
-  if (!Array.isArray(products)) {
-    console.error("products não é um array:", products);
-    return <div>Erro: produtos não são um array</div>;
-  }
 
   return (
     <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
@@ -25,7 +22,7 @@ export default async function Home() {
         "
       >
         {products.map((product: ProductType) => (
-          <Product key={product.id} product={product} />
+          <div key={product.id}>{product.name}</div>
         ))}
       </div>
     </div>
