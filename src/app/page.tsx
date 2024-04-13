@@ -13,7 +13,6 @@ async function getProducts() {
 
 export default async function Home() {
   const products = await getProducts();
-  console.log(products);
 
   return (
     <div className="max-w-7xl mx-auto pt-8 px-8 xl:px-0">
@@ -22,7 +21,7 @@ export default async function Home() {
         "
       >
         {products.map((product: ProductType) => (
-          <div key={product.id}>{product.name}</div>
+          <Product key={product.id} product={product}></Product>
         ))}
       </div>
     </div>
