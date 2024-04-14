@@ -1,4 +1,6 @@
+import { useCartStore } from "@/store";
 import Link from "next/link";
+import Cart from "./Cart";
 
 function Navbar() {
   return (
@@ -7,9 +9,13 @@ function Navbar() {
         href="/"
         className="uppercase font-bold   text-md h-12  flex items-center"
       >
-        MKS
+        MKS sistemas
       </Link>
+      <div>
+        <Cart />
+      </div>
     </nav>
   );
 }
+
 export default Navbar;
