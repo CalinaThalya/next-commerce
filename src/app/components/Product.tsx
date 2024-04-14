@@ -1,6 +1,7 @@
 import { ProductType } from "@/types/ProductTypes";
 import Image from "next/image";
 import ProductImage from "./ProductImage";
+import { formatPrice } from "@/lib/ultils";
 
 type ProductProps = {
   product: ProductType;
@@ -13,9 +14,11 @@ export default function Products({ product }: ProductProps) {
       </div>
       <div className="flex justify-between font-bold my-3">
         <p className="w-40 truncate">{product.name}</p>
-        <p className="text-white bg-gray-600 p-2 rounded-md">{product.price}</p>
+        <p className="text-white bg-gray-600 p-2 rounded-md">
+          {formatPrice(parseFloat(product.price))}
+        </p>
       </div>
-      <p style={{ fontSize: "0.rem" }}>{product.description}</p>
+      <p style={{ fontSize: "0.875rem" }}>{product.description}</p>
 
       <button className="font-bold rounded-md bg-blue-600 text-white px-3 py-2.5 text-sm text-center flex items-center justify-center space-x-1">
         <img
