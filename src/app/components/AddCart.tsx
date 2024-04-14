@@ -1,8 +1,9 @@
+"use client";
 import { useCartStore } from "@/store";
 import { ProductType } from "@/types/ProductTypes";
 
 export default function Product({ product }: { product: ProductType }) {
-  const { addProduct } = useCartStore(); // Corrigido aqui
+  const { addProduct } = useCartStore();
   return (
     <button
       onClick={() => addProduct(product)}
