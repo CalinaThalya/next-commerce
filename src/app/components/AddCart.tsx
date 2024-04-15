@@ -9,7 +9,7 @@ export default function Product({ product }: { product: ProductType }) {
   return (
     <button
       onClick={() => addProduct(product)}
-      className="flex items-center justify-center font-bold text-sm text-white bg-blue-600 rounded-md p-4"
+      className="flex items-center justify-center font-bold text-sm text-white bg-blue-600 h-9 rounded-md p-4"
     >
       {" "}
       <img
