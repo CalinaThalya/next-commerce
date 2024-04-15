@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Rodape";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
 
         <main className="bg-slate-100  h-screen p-16">{children}</main>
       </body>
+      <Footer />
     </html>
   );
 }
