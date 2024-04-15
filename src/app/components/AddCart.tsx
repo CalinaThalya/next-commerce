@@ -9,9 +9,15 @@ export default function Product({ product }: { product: ProductType }) {
   return (
     <button
       onClick={() => addProduct(product)}
-      className="rounded-md bg-teal-600 text-white px-3.5 py-2.5 text-sm text-center"
+      className="flex items-center justify-center font-bold text-sm text-white bg-blue-600 rounded-md p-4"
     >
-      Adicionar ao Carrinho
+      {" "}
+      <img
+        src="/8679212_shopping_bag_icon (1).png"
+        alt="Sua Foto"
+        className="h-6 w-6 mr-2"
+      />
+      Comprar{" "}
     </button>
   );
 }

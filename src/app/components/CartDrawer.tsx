@@ -19,12 +19,8 @@ export default function CartDrawer() {
         onClick={(e) => e.stopPropagation()}
         className="absolute bg-blue-600 right-0 top-0 w-1/3 h-screen p-8 overflow-y-scroll"
       >
-        <button
-          onClick={() => useStore.toggleCart()}
-          className="font-bold text-sm text-white   text-3xl"
-        >
-          Carrinho de compras{" "}
-        </button>
+        <button onClick={() => useStore.toggleCart()}>COMPRAR</button>
+
         <div className="border-t border-gray-400 my-4"></div>
 
         {useStore.cart.map((item) => (
@@ -43,14 +39,14 @@ export default function CartDrawer() {
                 {formatPrice(item.price)}
               </p>
               <button
-                className="py-1 px-2 border rounded-md mt-2 text-sm mr-1"
+                className="py-1 px-2 border  bg-white text-black rounded-md mt-2 text-sm mr-1"
                 onClick={() => useStore.addProduct(item)}
               >
                 Adicionar
               </button>
               <button
                 onClick={() => useStore.removeProduct(item)}
-                className="py-1 px-2 border rounded-md mt-2 text-sm"
+                className="py-1 px-2 border bg-white text-black rounded-md mt-2 text-sm"
               >
                 Remover
               </button>
