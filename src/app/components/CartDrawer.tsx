@@ -19,7 +19,12 @@ export default function CartDrawer() {
         onClick={(e) => e.stopPropagation()}
         className="absolute bg-blue-600 right-0 top-0 w-1/3 h-screen p-8 overflow-y-scroll"
       >
-        <button onClick={() => useStore.toggleCart()}>COMPRAR</button>
+        <button
+          onClick={() => useStore.toggleCart()}
+          className="flex items-center justify-center font-bold text-3xl text-white "
+        >
+          Carrinho de compras{" "}
+        </button>
 
         <div className="border-t border-gray-400 my-4"></div>
 
@@ -35,7 +40,7 @@ export default function CartDrawer() {
             <div>
               <h2 className="w-42 truncate">{item.name}</h2>
               <h2>Quantidade: {item.quantity}</h2>
-              <p className="text-teal-600 text-sm font-bold">
+              <p className="text-white text-sm font-bold">
                 {formatPrice(item.price)}
               </p>
               <button

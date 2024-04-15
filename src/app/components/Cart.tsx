@@ -1,4 +1,3 @@
-// Adicione esta linha no topo do arquivo para usar Client Components
 "use client";
 
 import { useCartStore } from "@/store";
