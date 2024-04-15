@@ -1,20 +1,17 @@
 "use client";
+
 import { useCartStore } from "@/store";
 import { ProductType } from "@/types/ProductTypes";
 
 export default function Product({ product }: { product: ProductType }) {
   const { addProduct } = useCartStore();
+
   return (
     <button
       onClick={() => addProduct(product)}
-      className="font-bold rounded-md bg-blue-600 text-white px-3 py-2.5 text-sm text-center flex items-center justify-center space-x-1"
+      className="rounded-md bg-teal-600 text-white px-3.5 py-2.5 text-sm text-center"
     >
-      <img
-        src="/8679212_shopping_bag_icon (1).png"
-        alt="img"
-        className="h-5 w-5"
-      />
-      <span>COMPRAR</span>
+      Adicionar ao Carrinho
     </button>
   );
 }
