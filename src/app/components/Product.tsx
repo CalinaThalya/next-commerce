@@ -10,7 +10,7 @@ type ProductProps = {
 };
 export default function Products({ product }: ProductProps) {
   return (
-    <div className="flex flex-col shadow-lg h-96 bg-white p-5">
+    <div className="flex flex-col shadow-lg h-96 bg-slate-100/50 p-5">
       <div className="relative max-h-72 flex-1">
         <ProductImage product={product} fill />
       </div>
