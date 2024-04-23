@@ -61,14 +61,12 @@ export default function CartDrawer() {
 
         {useStore.cart.length > 0 && (
           <div>
-            <div className="absolute bottom-24 h-8 text-xl right-10 z-10">
-              <div className="text-white font-bold">
-                Total: {formatPrice(totalPrice)}
-              </div>
-            </div>
+            <p className="text-white font-bold">
+              Total: {formatPrice(totalPrice)}
+            </p>
             <button
               onClick={() => useStore.setCheckout("checkout")}
-              className="fixed bottom-0 right-10 w-full max-w-xl rounded-md bg-black text-white py-8  text-3xl font-bolder"
+              className="w-full rounded-md bg-black text-white py-2 mt-2"
             >
               Finalizar Compra
             </button>
